@@ -30,3 +30,4 @@ Photos used in the template
 * http://www.publicdomainpictures.net/view-image.php?image=6354
 * http://imcreator.com/free/business/macbook-computer
 * http://unsplush.com
+* 20
