@@ -1,62 +1,89 @@
-var span = document.getElementById('return');
-var tramer=document.getElementById('tramer');
-var year=document.getElementById('year');
-
 
 
 function calculate()
 {
+    var tramer=document.getElementById('tramer');
+    var putout = document.getElementById('output');
+    var year=document.getElementById('year');
+    var hata = document.getElementById('eror');
+    var model = document.getElementById('model');
+    
+
+    var temp;
     
 
 //try catch to check proper values
+if(tramer.value <= 0)
+{
+    putout.innerHTML="Lütfen geçerli bir tramer kaydı belirtin.";
+   putout.style ="visibility:visible;";
+   putout.className = "alert alert-danger";
+}
+else 
+{
+if(model.value == 0)
+{
+    putout.innerHTML="Lütfen geçerli bir marka seçin.";
+   putout.style ="visibility:visible;";
+   putout.className = "alert alert-danger";
+}
+else
+{
 
-if(year== 0)
+if(year.value== 0)
 {
     
-    span.innerHTML ="Invalid format";
+    putout.innerHTML ="Lütfen Geçerli bir Yıl Seçin.";
+    putout.style ="visibility:visible;";
+   putout.className = "alert alert-danger";
 }
-else if(year== 1)
+else 
 {
-    tramer = (tramer/100)*125;
+if(year.value== 1)
+{
+    temp = (tramer.value/100)*125;
 }
-else if(year== 2)
+else if(year.value== 2)
 {
-    tramer = tramer;
+    temp = tramer.value;
     
 }
-else if(year== 3)
+else if(year.value== 3)
 {
-    tramer = (tramer/100)*125;
+    temp = (tramer.value/100)*125;
     
 }
-else if(year== 4)
+else if(year.value== 4)
 {
-    tramer = (tramer/100)*50;
+    temp = (tramer.value/100)*50;
     
 }
-else if(year== 5)
+else if(year.value== 5)
 {
-    tramer = (tramer/100)*50;
+    temp = (tramer.value/100)*50;
 
 }
 
-if(damage == 1)
+if(document.getElementById("damage").checked == true)
 {
-    tramer= (tramer/100)*75;
+    temp = (tramer.value/100)*75;
 }
-if(accident == 1)
+if(document.getElementById("accident").checked == true)
 {
-    tramer= (tramer/100)*75;
-}
-
-
-
-
-
-
+    temp = (tramer.value/100)*75;
 }
 
-function calculate2()
-{
-document.getElementById("return").innerHTML = "hello";   
+
+
+
+    
+   putout.innerHTML="Aracınızdaki değer kaybı:"+temp +"TL";
+   putout.style ="visibility:visible;";
+   putout.className = "alert alert-success";
+
+   
+   
+}
+}
+}
 }
