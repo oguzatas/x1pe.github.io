@@ -1,3 +1,3 @@
 # x1pe.github.io
 
-an algorythm that will be added to kazatespit.com soon!
+https://www.kazatespit.com/arac-deger-kaybi-hesaplama/
